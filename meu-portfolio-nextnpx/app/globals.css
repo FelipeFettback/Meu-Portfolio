@@ -26,7 +26,11 @@ body {
 .site-wrapper {
     display: flex;
     flex-direction: column; 
-    max-width: 1450px; /* <-- AUMENTADO PARA EMPURRAR O CABEÇALHO PARA A ESQUERDA */
+    
+    /* NOVAS REGRAS DE LARGURA FLUIDA */
+    width: 92%; /* O site sempre vai ocupar 92% da tela, não importa o tamanho do monitor NAO FUNCIONANDO*/
+    max-width: 1350px; /* Trava num tamanho máximo para não ficar bizarro numa TV gigante NAO FUNCIONANDO*/
+    
     margin: 0 auto;
     padding: 20px;
 }
@@ -191,18 +195,22 @@ a.cartao-projeto:hover {
 }
 
 /* =======================================================
-   A MÁGICA DO COMPUTADOR
+   A MÁGICA DOS COMPUTADORES E NOTEBOOKS (Responsividade)
    ======================================================= */
 @media (min-width: 850px) {
     .site-wrapper {
         flex-direction: row; 
         align-items: flex-start; 
-        gap: 120px; /* <--- AUMENTADO O ESPAÇAMENTO AQUI (Era 50px) */
+        
+        /* O espaço vazio agora é flexível! */
+        justify-content: space-between; 
+        gap: 5%; /* O buraco entre esquerda e direita cresce ou diminui com o monitor */
+        
         padding-top: 50px; 
     }
 
     header {
-        width: 28%; /* <--- Ajustado para o texto 'Sobre Mim' ficar com uma boa quebra de linha */
+        width: 28%; /* A foto ocupa sempre 28% da tela atual */
         position: sticky; 
         top: 50px; 
         padding: 0;
@@ -214,16 +222,18 @@ a.cartao-projeto:hover {
     }
 
     main {
-        width: 65%; /* <--- Reduzido de 75% para 65% para compensar o gap gigante sem estourar a tela */
+        width: 67%; /* Os projetos ocupam sempre 67% da tela atual */
     }
 
     .linha-dupla {
         flex-direction: row; 
         align-items: flex-start;
+        gap: 20px;
     }
 
     .linha-dupla .container {
         flex: 1; 
         margin-bottom: 0; 
+        width: 50%; /* Garante que Diplomas e Habilidades dividam o espaço meio a meio */
     }
 }
