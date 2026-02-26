@@ -6,7 +6,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* 1. FUNDO ANIMADO (Degradê em movimento lento) */
 body {
     background: linear-gradient(135deg, #000000, #011a0d, #022915, #000000);
     background-size: 300% 300%;
@@ -15,6 +14,7 @@ body {
     color: #e0e0e0;
     line-height: 1.6;
     min-height: 100vh;
+    font-size: 14px; 
 }
 
 @keyframes moverFundo {
@@ -23,16 +23,14 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* --- A Caixa Principal --- */
 .site-wrapper {
     display: flex;
     flex-direction: column; 
-    max-width: 1400px;
+    max-width: 1450px; /* <-- AUMENTADO PARA EMPURRAR O CABEÇALHO PARA A ESQUERDA */
     margin: 0 auto;
     padding: 20px;
 }
 
-/* 2. ENTRADA SUAVE (Conteúdo surge de baixo para cima) */
 main {
     width: 100%;
     animation: surgir 1s ease-out forwards;
@@ -41,7 +39,7 @@ main {
 header {
     text-align: center;
     padding: 20px 0 40px 0;
-    animation: surgir 0.8s ease-out forwards; /* O cabeçalho aparece um pouquinho antes */
+    animation: surgir 0.8s ease-out forwards; 
 }
 
 @keyframes surgir {
@@ -49,49 +47,61 @@ header {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* 3. FOTO DE PERFIL COM PULSO */
+/* FOTO */
 .foto-perfil {
-    width: 150px;
-    height: 150px;
+    width: 120px; 
+    height: 120px; 
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #2ecc71;
     margin-bottom: 15px;
-    animation: pulsoVerde 2s infinite; /* Chama a animação do pulso */
+    animation: pulsoVerde 2s infinite; 
 }
 
 @keyframes pulsoVerde {
     0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.4); }
-    70% { box-shadow: 0 0 0 15px rgba(46, 204, 113, 0); }
+    70% { box-shadow: 0 0 0 12px rgba(46, 204, 113, 0); }
     100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
 }
 
+/* TEXTOS */
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem; 
     color: #ffffff;
+    margin-bottom: 5px;
 }
 
 .subtitulo {
-    font-size: 1.2rem;
+    font-size: 1rem; 
     color: #a8bbaea8;
     margin-bottom: 20px;
 }
 
-/* Botões de Contato */
+.texto-sobre {
+    font-size: 0.95rem;
+    color: #b5c2b9;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* BOTÕES DE CONTATO */
 .links-contato {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px; 
 }
 
 .links-contato a {
     color: #ffffff;
     text-decoration: none;
     background-color: #1e824c;
-    padding: 8px 15px;
+    padding: 6px 12px; 
     border-radius: 5px;
     transition: background 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .links-contato a:hover {
@@ -99,36 +109,40 @@ h1 {
     transform: scale(1.05);
 }
 
-/* Seções Gerais */
+/* CONTAINERS E LINHA DUPLA */
 .container {
-    padding: 20px 0;
-    margin-bottom: 20px;
+    padding: 15px 0; 
+    margin-bottom: 15px; 
+}
+
+.linha-dupla {
+    display: flex;
+    flex-direction: column; /* Padrão celular: uma embaixo da outra */
+    gap: 20px;
 }
 
 h2 {
     color: #2ecc71;
     border-bottom: 2px solid #1e824c;
     padding-bottom: 5px;
-    margin-bottom: 20px;
-
-    /* NOVA REGRA: Alinha ícone e texto */
+    margin-bottom: 15px; 
     display: flex;
     align-items: center;
-    gap: 12px; /* Espaço entre ícone e texto */
+    gap: 10px;
 }
 
-/* Habilidades */
+/* HABILIDADES */
 .lista-habilidades {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    gap: 10px;
+    gap: 8px; 
 }
 
 .lista-habilidades li {
     background-color: rgba(46, 204, 113, 0.1);
     border: 1px solid #1e824c;
-    padding: 8px 15px;
+    padding: 6px 12px; 
     border-radius: 20px;
     font-weight: bold;
     color: #2ecc71;
@@ -136,71 +150,61 @@ h2 {
 }
 
 .lista-habilidades li:hover {
-    transform: scale(1.1); /* Dá um zoomzinho ao passar o mouse na habilidade */
+    transform: scale(1.1); 
     background-color: #1e824c;
     color: white;
 }
 
-/* 4. CARTÕES DE PROJETOS E DIPLOMAS (Efeito Flutuar) */
+/* CARTÕES DE PROJETO/DIPLOMA */
 .grade-projetos {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px; 
 }
 
 .cartao-projeto {
     background: rgba(0, 0, 0, 0.5);
     border: 1px solid #1e824c;
-    padding: 20px;
+    padding: 15px; 
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    transition: all 0.3s ease; /* Prepara o cartão para animações suaves */
+    transition: all 0.3s ease; 
 }
 
-/* O hover só é ativado se o cartão for um Link (tag 'a') */
 a.cartao-projeto:hover {
-    transform: translateY(-8px); /* Levanta o cartão */
-    box-shadow: 0 10px 25px rgba(46, 204, 113, 0.25); /* Acende o brilho verde atrás */
-    border-color: #2ecc71; /* A borda fica mais viva */
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 25px rgba(46, 204, 113, 0.25); 
+    border-color: #2ecc71; 
     background: rgba(0, 0, 0, 0.8);
 }
 
 .cartao-projeto h3 {
-    margin-bottom: 10px;
+    margin-bottom: 8px; 
     color: #2ecc71;
-    /* NOVA REGRA: Alinha ícone e texto */
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
 .cartao-projeto p {
-    margin-bottom: 15px;
     color: #d1d1d1;
 }
 
-.midia-projeto {
-    width: 100%;
-    border-radius: 8px;
-    margin-top: 10px;
-    border: 1px solid #1e824c;
-}
-
 /* =======================================================
-   A MÁGICA DO COMPUTADOR (Telas largas, lado a lado) 
+   A MÁGICA DO COMPUTADOR
    ======================================================= */
 @media (min-width: 850px) {
     .site-wrapper {
         flex-direction: row; 
         align-items: flex-start; 
-        gap: 60px; 
-        padding-top: 60px;
+        gap: 120px; /* <--- AUMENTADO O ESPAÇAMENTO AQUI (Era 50px) */
+        padding-top: 50px; 
     }
 
     header {
-        width: 30%; 
+        width: 28%; /* <--- Ajustado para o texto 'Sobre Mim' ficar com uma boa quebra de linha */
         position: sticky; 
-        top: 60px; 
+        top: 50px; 
         padding: 0;
         text-align: left; 
     }
@@ -210,6 +214,16 @@ a.cartao-projeto:hover {
     }
 
     main {
-        width: 70%; 
+        width: 65%; /* <--- Reduzido de 75% para 65% para compensar o gap gigante sem estourar a tela */
+    }
+
+    .linha-dupla {
+        flex-direction: row; 
+        align-items: flex-start;
+    }
+
+    .linha-dupla .container {
+        flex: 1; 
+        margin-bottom: 0; 
     }
 }
