@@ -70,6 +70,7 @@ export default function Home() {
               <li>CSS</li>
               <li>JAVA</li>
               <li>SQL</li>
+              <li>AWS</li>
               <li>C (Microprocessadores)</li>
               <li>Modelagem 3D (Autodesk Inventor)</li>
               <li>Linguagem R</li>
