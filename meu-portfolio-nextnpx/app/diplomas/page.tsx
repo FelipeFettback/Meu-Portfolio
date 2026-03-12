@@ -28,7 +28,7 @@ export default function Diplomas() {
         <section className="container">
           <h2>A Minha Formação e Certificados</h2>
           <div className="grade-projetos">
-            {/* Cartão do seu curso atual */}
+            {/* Curso atual */}
             <div className="cartao-projeto">
               <h3>Engenharia de Computação</h3>
               <p>
@@ -40,13 +40,13 @@ export default function Diplomas() {
               </p>
             </div>
 
-            {/* Pode adicionar mais cartões de diplomas aqui no futuro */}
+            {/* adicionar mais cartões de diplomas aqui futuramente */}
             <div className="cartao-projeto">
-              <h3>Certificado em [Nome do Curso]</h3>
+              <h3>Certificado em ---</h3>
               <p>
-                <strong>[Instituição]</strong>
+                <strong>Instituição</strong>
               </p>
-              <p>Descrição do curso ou certificado que obteve.</p>
+              <p>Descrição do curso.</p>
             </div>
           </div>
         </section>
