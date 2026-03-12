@@ -58,7 +58,7 @@ export default function Home() {
 
       {/* LADO DIREITO */}
       <main>
-        {/* NOVA CAIXA: Coloca Habilidades e Diplomas lado a lado no PC */}
+        {/*Coloca Habilidades e Diplomas lado a lado no PC */}
         <div className="linha-dupla">
           <section className="container">
             <h2>
@@ -99,7 +99,7 @@ export default function Home() {
           </section>
         </div>
 
-        {/* SEÇÃO DE PROJETOS (Fica embaixo, ocupando a largura toda) */}
+        {/* SEÇÃO DE PROJETOS (embaixo com enfase, ocupando a largura toda) */}
         <section className="container">
           <h2>
             <FolderGit2 size={24} color="#2ecc71" /> Os Meus Projetos

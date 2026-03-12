@@ -27,9 +27,9 @@ body {
     display: flex;
     flex-direction: column; 
     
-    /* NOVAS REGRAS DE LARGURA FLUIDA */
-    width: 92%; /* O site sempre vai ocupar 92% da tela, não importa o tamanho do monitor NAO FUNCIONANDO*/
-    max-width: 1350px; /* Trava num tamanho máximo para não ficar bizarro numa TV gigante NAO FUNCIONANDO*/
+    /* REGRAS DE LARGURA FLUIDA */
+    width: 92%; /* site sempre vai ocupar 92% da tela, não importa o tamanho do monitor */
+    max-width: 1350px; /* Trava num tamanho máximo para não ficar bizarro numa TV gigante*/
     
     margin: 0 auto;
     padding: 20px;
@@ -194,23 +194,21 @@ a.cartao-projeto:hover {
     color: #d1d1d1;
 }
 
-/* =======================================================
-   A MÁGICA DOS COMPUTADORES E NOTEBOOKS (Responsividade)
-   ======================================================= */
+
 @media (min-width: 850px) {
     .site-wrapper {
         flex-direction: row; 
         align-items: flex-start; 
         
-        /* O espaço vazio agora é flexível! */
+        /* espaço vazio flexível */
         justify-content: space-between; 
-        gap: 5%; /* O buraco entre esquerda e direita cresce ou diminui com o monitor */
+        gap: 5%; /* o buraco entre esquerda e direita cresce ou diminui com o monitor */
         
         padding-top: 50px; 
     }
 
     header {
-        width: 28%; /* A foto ocupa sempre 28% da tela atual */
+        width: 28%; /* a foto ocupa sempre 28% da tela atual */
         position: sticky; 
         top: 50px; 
         padding: 0;

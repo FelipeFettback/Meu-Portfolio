@@ -44,7 +44,7 @@ export default function LocalizacaoEstoque() {
             Estoque de Fábrica
           </h2>
 
-          {/*  O SEU BOTÃO DE LINK PARA O SITE DO PROJETO */}
+          {/*Link Do Site do Projeto*/}
           <div style={{ marginTop: "25px", marginBottom: "10px" }}>
             <a
               href="https://deere-go.vercel.app/"
@@ -115,7 +115,6 @@ export default function LocalizacaoEstoque() {
             Tecnologias Utilizadas
           </h3>
           <ul className="lista-habilidades">
-            {/* Troque estas tecnologias pelas que você realmente usou neste projeto */}
             <li>
               <Cpu
                 size={14}

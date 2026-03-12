@@ -46,9 +46,7 @@ export default function FabricacaoDigital() {
             digital (corte e usinagem).
           </p>
 
-          {/* ==========================================
-              PROJETO 1
-              ========================================== */}
+          {/*PROJETO 1*/}
           <div style={{ marginBottom: "50px" }}>
             <h3 style={{ color: "#2ecc71", marginBottom: "15px" }}>
               1. Mesa para o Projeto da ACHE (Corte CNC)
@@ -81,9 +79,7 @@ export default function FabricacaoDigital() {
             </p>
           </div>
 
-          {/* ==========================================
-              PROJETO 2
-              ========================================== */}
+          {/*PROJETO 2*/}
           <div style={{ marginBottom: "50px" }}>
             <h3 style={{ color: "#2ecc71", marginBottom: "15px" }}>
               2. Armazenamento do Microprocessador para projeto da JohnDeere
@@ -115,9 +111,7 @@ export default function FabricacaoDigital() {
             </p>
           </div>
 
-          {/* ==========================================
-              PROJETO 3
-              ========================================== */}
+          {/*PROJETO 3*/}
           <div style={{ marginBottom: "40px" }}>
             <h3 style={{ color: "#2ecc71", marginBottom: "15px" }}>
               3. Amassador de Batata
@@ -147,7 +141,7 @@ export default function FabricacaoDigital() {
             </p>
           </div>
 
-          {/* FERRAMENTAS (Fica fixo no final da página) */}
+          {/*FERRAMENTAS UTILIZADAS*/}
           <h3
             style={{
               color: "#2ecc71",
@@ -177,9 +171,7 @@ export default function FabricacaoDigital() {
         </section>
       </main>
 
-      {/* ==========================================
-          CÓDIGO INVISÍVEL DA TELA PRETA (Abre qualquer foto)
-          ========================================== */}
+      {/*CÓDIGO INVISÍVEL DA TELA PRETA*/}
       {fotoAmpliada && (
         <div
           onClick={() => setFotoAmpliada(null)}

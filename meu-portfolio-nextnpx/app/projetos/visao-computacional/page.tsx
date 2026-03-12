@@ -34,7 +34,7 @@ export default function VisaoComputacional() {
             com Visão Computacional
           </h2>
 
-          {/*  O SEU BOTÃO DE LINK PARA O SITE DO PROJETO */}
+          {/*LINK PARA O SITE DO PROJETO */}
           <div style={{ marginTop: "25px", marginBottom: "10px" }}>
             <a
               href="https://achevision.netlify.app/"
@@ -64,14 +64,11 @@ export default function VisaoComputacional() {
             </a>
           </div>
 
-          {/* A sua foto em destaque - AGORA COM O CLIQUE ATIVADO */}
           <img
             src="/midia/ProjetoAche.jpeg"
             alt="Demonstração do projeto de Visão Computacional"
             className="midia-projeto"
-            onClick={() =>
-              setFotoAmpliada(true)
-            } /* <--- ESTAVA FALTANDO ESSA LINHA MÁGICA! */
+            onClick={() => setFotoAmpliada(true)}
             style={{
               marginTop: "20px",
               marginBottom: "30px",
@@ -83,7 +80,7 @@ export default function VisaoComputacional() {
             }}
             onMouseOver={(e) =>
               (e.currentTarget.style.transform = "scale(1.02)")
-            } /* Dá um zoomzinho ao passar o mouse */
+            }
             onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
           />
 
@@ -162,9 +159,7 @@ export default function VisaoComputacional() {
           </ul>
         </section>
       </main>
-      {/* =======================================================
-          4. O CÓDIGO INVISÍVEL: SÓ APARECE SE CLICAR NA FOTO 
-          ======================================================= */}
+
       {fotoAmpliada && (
         <div
           onClick={() =>
@@ -186,10 +181,10 @@ export default function VisaoComputacional() {
           }}
         >
           <img
-            src="/midia/ProjetoAche.jpeg" /* <--- O NOME FOI CORRIGIDO AQUI! */
+            src="/midia/ProjetoAche.jpeg"
             alt="Foto ampliada"
             style={{
-              maxWidth: "90%" /* A foto gigante nunca vai vazar da tela */,
+              maxWidth: "90%" /* foto nunca vai vazar da tela */,
               maxHeight: "90%",
               borderRadius: "10px",
               boxShadow:
