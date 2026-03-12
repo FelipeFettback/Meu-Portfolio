@@ -8,7 +8,7 @@ export default function Diplomas() {
       <header>
         <img src="/midia/FelipeWapfFettbackFoto.jpeg" alt="Felipe Fettback" className="foto-perfil" />
         <h1>Felipe Wapf Fettback</h1>
-        <p className="subtitulo">Estudante em Engenharia de Computação</p>
+        <p className="subtitulo">Estudante de Engenharia de Computação na FIAP com término em dezembro de 2028. Tenho foco resolver problemas através da tecnologia e da engenharia. Tenho experiência prática na criação de soluções que integram software e hardware, buscando sempre aprender novas ferramentas para otimizar processos.</p>
         <div className="links-contato">
             <Link href="/">← Voltar ao Início</Link>
         </div>
